@@ -1,0 +1,15 @@
+version: 1.1.4
+cache: true
+endpoints:
+  custom:
+    - name: "deepbricks"
+      apiKey: "${deepbricks_key}"
+      baseURL: "https://api.deepbricks.ai/v1/"
+      models:
+        default: [
+          "Claude-3.5-Sonnet",
+          "GPT-4o-2024-08-06"
+          ]
+        fetch: false # fetching list of models is not supported
+      titleConvo: true
+      titleModel: "current_model"
